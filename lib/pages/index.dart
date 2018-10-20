@@ -7,11 +7,12 @@ class index extends StatelessWidget{
     return new Material(
       color: Colors.lightBlue,
       child: new InkWell(
+        onTap: () => print("Page has been tapped"),
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             new Text("Quizzz", style: new TextStyle(color: Colors.white, fontSize: 50.0)),
-            new Text("Tap here man!", style: new TextStyle(color: Colors.white, fontSize: 50.0))
+            new Text("Tap here man!", style: new TextStyle(color: Colors.white, fontSize: 30.0))
           ],
         ),
       ),
