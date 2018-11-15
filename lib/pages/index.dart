@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './quiz_page.dart';
 
 class index extends StatelessWidget{
   @override
@@ -7,7 +8,7 @@ class index extends StatelessWidget{
     return new Material(
       color: Colors.lightBlue,
       child: new InkWell(
-        onTap: () => print("Page has been tapped"),
+        onTap: () => Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new QuizPage())),
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[

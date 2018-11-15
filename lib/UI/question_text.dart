@@ -27,6 +27,21 @@ class QuestionTextState extends State<QuestionText> with SingleTickerProviderSta
   }
 
   @override
+  void dispose(){
+    _fontSizeAnimationController.dispose();
+    super.dispose();
+  }
+
+  @override
+  void didUpdateWidget(QuestionText oldwidget){
+    super.didUpdateWidget(oldwidget);
+    if(oldwidget._question != widget._question){
+      _fontSizeAnimationController.reset();
+      _fontSizeAnimationController.forward();
+    }
+  }
+
+  @override
   Widget build(BuildContext context){
     return new Material(
       color: Colors.white,
